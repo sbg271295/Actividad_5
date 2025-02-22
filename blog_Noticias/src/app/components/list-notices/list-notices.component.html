@@ -1,4 +1,4 @@
-<section class="series">
+<section>
   <h2>Articulos publicados</h2>
   <hr>
   <div class="flex">
@@ -9,6 +9,7 @@
       </figure>
       <h3>{{noticia.title}}</h3>
       <p>{{noticia.texto}}</p>
+      <p>{{noticia.categoria}}</p>
       <p>Fecha de Publicación: {{ noticia.fecha | date: 'dd-MM-yyyy' }}</p>
     </article>
   }@empty {

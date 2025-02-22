@@ -13,6 +13,10 @@
     <label for="descripcion">Noticia</label>
   <input type="text" placeholder="Introduce el texto de la noticia" [(ngModel)]="newNotice.texto" required>
   </div>
+  <div class="mb-3">
+    <label for="categoria">Categoría</label>
+  <input type="text" placeholder="Introduce la categoria" [(ngModel)]="newNotice.categoria" required>
+  </div>
   <!-- Se elimina el input de fecha, porque suponemos que la fecha de hoy sera el dia de publicacion. -->
   <button (click)="publicar()" class="btn btn-danger">Publicar</button>
 </div>

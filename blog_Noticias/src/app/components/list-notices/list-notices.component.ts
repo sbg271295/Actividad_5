@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { INotice } from '../../interfaces/inotice.interface';
 import { CommonModule } from '@angular/common';
 
@@ -8,13 +8,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './list-notices.component.html',
   styleUrl: './list-notices.component.css'
 })
-export class ListNoticesComponent {
-  @Input() misNotices:INotice[]=[];
+export class ListNoticesComponent implements OnInit {
+
+  @Input() listaNotices:INotice[]=[];
 
   noticias:INotice[]=[];
 
   ngOnInit():void{
-    this.noticias=this.misNotices
+    console.log(this.listaNotices)
+    this.noticias=this.listaNotices
+    console.log(this.noticias)
   }
-
 }

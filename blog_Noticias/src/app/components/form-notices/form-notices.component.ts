@@ -10,17 +10,17 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormNoticesComponent {
 
-  newNotice:INotice={title:"", img: "",texto: "",fecha:new Date()}
+  newNotice:INotice={title:"", img: "",texto: "",categoria:"",fecha:new Date()}
 
   @Output() publicForm: EventEmitter<INotice> = new EventEmitter();
 
   publicar(){
-    if (!this.newNotice.title.trim() || !this.newNotice.img.trim() || !this.newNotice.texto.trim()) {
+    if (!this.newNotice.title.trim() || !this.newNotice.img.trim() || !this.newNotice.texto.trim()|| !this.newNotice.categoria.trim()) {
       alert('⚠️ Debes rellenar todos los campos antes de publicar.');
     }else{
       alert('Noticia publicada')
       this.publicForm.emit(this.newNotice)
-      this.newNotice={title:"", img: "",texto: "",fecha:new Date()}
+      this.newNotice={title:"", img: "",texto: "",categoria:"",fecha:new Date()}
   }
   }
 }

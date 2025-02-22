@@ -3,4 +3,5 @@ export interface INotice {
  img:string;
  texto:string;
  fecha:Date;
+ categoria:string;
 }
