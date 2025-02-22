@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormNoticesComponent } from "./components/form-notices/form-notices.component";
+import { BlogComponent } from "./components/blog/blog.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormNoticesComponent, BlogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
