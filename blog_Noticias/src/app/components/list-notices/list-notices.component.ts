@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { INotice } from '../../interfaces/inotice.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-list-notices',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './list-notices.component.html',
   styleUrl: './list-notices.component.css'
 })
