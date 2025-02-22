@@ -1,17 +1,20 @@
 .container {
   display: flex;
   flex-direction: row;
-  gap: 350px;
+  gap: 30px;
   max-width: 100%;
   padding-top: 12px;
-  margin-left: 10%;
+
 }
 
 .column-form {
-  flex: 1; /* Columna más ancha */
+  flex: 1;
+  max-width: 30%;
 }
 
 .column-list {
-  flex: 2; /* Columna más angosta */
+  flex: 2;
+  max-width: 70%;
+  padding-right: 200px;
 }
 

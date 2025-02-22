@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los artículos se ajusten en filas */
+  gap: 20px; /* Espacio entre artículos */
+}
+
+article {
+  width: calc(33.333% - 20px); /* Tres artículos por fila, con margen */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
