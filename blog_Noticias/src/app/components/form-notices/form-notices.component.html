@@ -1,16 +1,19 @@
+<div class="container">
+<h3>Formulario de Publicación </h3>
 <div class="form">
   <div class="mb-3">
     <label for="title">Titulo</label>
-  <input type="text" placeholder="Introduce un titulo" [(ngModel)]="newNotice.title">
+    <input type="text" placeholder="Introduce un titulo" [(ngModel)]="newNotice.title" required>
   </div>
   <div class="mb-3">
     <label for="URL">url de imagen</label>
-  <input type="img" placeholder="Introduce una URL de la Imagen" [(ngModel)]="newNotice.img">
+  <input type="img" placeholder="Introduce una URL de la Imagen" [(ngModel)]="newNotice.img" required>
   </div>
   <div class="mb-3">
     <label for="descripcion">Noticia</label>
-  <input type="text" placeholder="Introduce el texto de la noticia" [(ngModel)]="newNotice.texto">
+  <input type="text" placeholder="Introduce el texto de la noticia" [(ngModel)]="newNotice.texto" required>
   </div>
   <!-- Se elimina el input de fecha, porque suponemos que la fecha de hoy sera el dia de publicacion. -->
   <button (click)="publicar()" class="btn btn-danger">Publicar</button>
+</div>
 </div>

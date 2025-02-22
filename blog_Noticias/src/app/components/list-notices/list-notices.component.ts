@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INotice } from '../../interfaces/inotice.interface';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +13,7 @@ export class ListNoticesComponent {
 
   noticias:INotice[]=[];
 
-  ngOnInit(){
+  ngOnInit():void{
     this.noticias=this.misNotices
   }
 

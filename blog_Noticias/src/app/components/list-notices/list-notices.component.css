@@ -1,22 +1,26 @@
 .flex {
   display: flex;
-  flex-wrap: wrap; /* Permite que los artículos se ajusten en filas */
-  gap: 20px; /* Espacio entre artículos */
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Los artículos se reparten en filas con un ancho fijo */
 article {
-  width: calc(33.333% - 20px); /* Tres artículos por fila, con margen */
+  width: calc(33% - 20px);
+  max-height: fit-content;
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 16px;
+  padding: 30px;
   background-color: #f9f9f9;
   transition: box-shadow 0.3s ease-in-out;
 }
 
+/* Imagen con tamaño fijo */
 figure img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
   border-radius: 8px;
   margin-bottom: 10px;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, SimpleChanges } from '@angular/core';
 import { FormNoticesComponent } from "../form-notices/form-notices.component";
 import { ListNoticesComponent } from "../list-notices/list-notices.component";
 import { INotice } from '../../interfaces/inotice.interface';
@@ -12,12 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class BlogComponent {
 
-  publicacionNoticia(event: INotice) {
 
-    event.fecha = new Date();
-    this.arrayNotices.push(event);
-
-  }
   arrayNotices:INotice[]=[
 
     {
@@ -73,13 +68,12 @@ export class BlogComponent {
       img: 'https://placehold.co/600x400/EEE/31343C',
       texto: 'Ejercicios sencillos y hábitos saludables para evitar el sedentarismo en el trabajo.',
       fecha: new Date('2025-08-12')
-  },
-  {
-      title: 'El Auge de las Startups Tecnológicas en América Latina',
-      img: 'https://placehold.co/600x400/EEE/31343C',
-      texto: 'Empresas emergentes están innovando en sectores como fintech, salud y educación.',
-      fecha: new Date('2025-09-15')
   }
 ]
+
+publicacionNoticia(event: INotice) {
+  event.fecha = new Date();
+  this.arrayNotices.push(event);
+}
 
 }

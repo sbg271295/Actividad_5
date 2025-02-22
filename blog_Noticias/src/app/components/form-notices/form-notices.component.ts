@@ -15,7 +15,12 @@ export class FormNoticesComponent {
   @Output() publicForm: EventEmitter<INotice> = new EventEmitter();
 
   publicar(){
-    this.publicForm.emit(this.newNotice)
-    this.newNotice={title:"", img: "",texto: "",fecha:new Date()}
+    if (!this.newNotice.title.trim() || !this.newNotice.img.trim() || !this.newNotice.texto.trim()) {
+      alert('⚠️ Debes rellenar todos los campos antes de publicar.');
+    }else{
+      alert('Noticia publicada')
+      this.publicForm.emit(this.newNotice)
+      this.newNotice={title:"", img: "",texto: "",fecha:new Date()}
+  }
   }
 }

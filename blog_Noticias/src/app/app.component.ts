@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'blog_Noticias';
+  fechaMasReciente: Date | string = 'No disponible';
+
+  recibirFechaMasReciente(fecha: Date){
+    this.fechaMasReciente = fecha;
+  }
 
 
 }

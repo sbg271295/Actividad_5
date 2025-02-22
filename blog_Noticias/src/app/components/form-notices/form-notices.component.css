@@ -1,0 +1,71 @@
+.container{
+  padding-left: 100px;
+}
+/* Contenedor del formulario */
+.form {
+  max-width: 500px;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos generales de los inputs y labels */
+.form label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form input[type="text"],
+.form input[type="img"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al hacer foco en los inputs */
+.form input[type="text"]:focus,
+.form input[type="img"]:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.2);
+}
+
+/* Botón personalizado */
+.btn {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #e65c5c;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Efecto de transición al hacer hover */
+.mb-3 {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.mb-3:hover {
+  transform: translateY(-3px);
+}
