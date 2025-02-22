@@ -1,12 +1,12 @@
 <div class="container">
   <!-- Columna para el formulario -->
-  <div class="column-form">
-      <app-form-notices></app-form-notices>
-  </div>
+  <section class="column-form">
+      <app-form-notices (publicForm)="publicacionNoticia($event)" ></app-form-notices>
+  </section>
 
   <!-- Columna para el listado de noticias -->
-  <div class="column-list">
+  <section class="column-list">
       <app-list-notices [misNotices]="arrayNotices"></app-list-notices>
-  </div>
+  </section>
 </div>
 

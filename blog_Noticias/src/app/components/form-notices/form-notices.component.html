@@ -1,1 +1,16 @@
-<p>form-notices works!</p>
+<div class="form">
+  <div class="mb-3">
+    <label for="title">Titulo</label>
+  <input type="text" placeholder="Introduce un titulo" [(ngModel)]="newNotice.title">
+  </div>
+  <div class="mb-3">
+    <label for="URL">url de imagen</label>
+  <input type="img" placeholder="Introduce una URL de la Imagen" [(ngModel)]="newNotice.img">
+  </div>
+  <div class="mb-3">
+    <label for="descripcion">Noticia</label>
+  <input type="text" placeholder="Introduce el texto de la noticia" [(ngModel)]="newNotice.texto">
+  </div>
+  <!-- Se elimina el input de fecha, porque suponemos que la fecha de hoy sera el dia de publicacion. -->
+  <button (click)="publicar()" class="btn btn-danger">Publicar</button>
+</div>
