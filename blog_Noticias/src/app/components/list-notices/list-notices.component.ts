@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { INotice } from '../../interfaces/inotice.interface';
 
 @Component({
   selector: 'app-list-notices',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './list-notices.component.css'
 })
 export class ListNoticesComponent {
+  @Input() misNotices:INotice[]=[];
+
+  noticias:INotice[]=[];
+
+  ngOnInit(){
+    this.noticias=this.misNotices
+  }
 
 }

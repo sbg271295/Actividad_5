@@ -1,1 +1,18 @@
-<p>list-notices works!</p>
+<section class="series">
+  <h2>Articulos publicados</h2>
+  <hr>
+  <div class="flex">
+    @for(noticia of noticias;track noticia.title){
+    <article>
+      <figure>
+        <img [src]="noticia.img" [alt]="noticia.title">
+      </figure>
+      <h3>{{noticia.title}}</h3>
+      <p>{{noticia.texto}}</p>
+      <p>Fecha de Publicación: {{noticia.fecha}}</p>
+    </article>
+  }@empty {
+    <h2>No hay resultados</h2>
+  }
+  </div>
+</section>
