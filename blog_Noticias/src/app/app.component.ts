@@ -5,7 +5,7 @@ import { BlogComponent } from "./components/blog/blog.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormNoticesComponent, BlogComponent],
+  imports: [FormNoticesComponent, BlogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

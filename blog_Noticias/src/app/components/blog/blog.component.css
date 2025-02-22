@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 350px;
+  max-width: 100%;
+  padding-top: 12px;
+  margin-left: 10%;
+}
+
+.column-form {
+  flex: 1; /* Columna más ancha */
+}
+
+.column-list {
+  flex: 2; /* Columna más angosta */
+}
+
