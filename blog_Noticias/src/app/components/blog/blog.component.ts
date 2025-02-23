@@ -11,12 +11,17 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './blog.component.css'
 })
 export class BlogComponent {
- @Input() listaNotices:INotice[]=[];
+
+  @Output() fechaMasReciente = new EventEmitter<string>();
+  @Input() listaNotices:INotice[]=[];
 
 publicacionNoticia(event: INotice) {
   event.fecha = new Date();
   this.listaNotices.push(event);
-  console.log(this.listaNotices)
+
+  const fechaMasReciente = new Date();
+  this.fechaMasReciente.emit(fechaMasReciente.toLocaleDateString('es-ES'));
+
 }
 
 }

@@ -8,12 +8,32 @@ import { ListNoticesComponent } from './components/list-notices/list-notices.com
 
 @Component({
   selector: 'app-root',
-  imports: [BlogComponent,FormsModule,ListNoticesComponent],
+  imports: [BlogComponent,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   title = 'blog_Noticias';
+
+  fechaMasReciente: string = ''; // Propiedad para almacenar la fecha más reciente
+
+  manejarFechaMasReciente(fecha:string) {
+    this.fechaMasReciente = fecha;
+  }
+  calcularFechaMasReciente() {
+    if (this.arrayNotices.length > 0) {
+
+      const fechaMasReciente = new Date(Math.max(...this.arrayNotices.map(n => new Date(n.fecha).getTime())));
+
+      this.fechaMasReciente = fechaMasReciente.toLocaleDateString('es-ES');
+    }
+  }
+
+  ngOnInit() {
+      this.calcularFechaMasReciente()
+  }
+
 
   arrayNotices: INotice[] = [
     {
