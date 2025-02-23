@@ -1,15 +1,21 @@
 header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between; /* Espacio entre el h1 y la imagen */
+  align-items: center; /* Alinea verticalmente */
   height: 200px;
   padding: 20px;
-  padding-top: 30px;
 }
 
 header img {
-  max-width: 100%;
-  height: 200px;
+  max-height: 100%; /* Mantener la altura de la imagen dentro del header */
+  width: auto; /* Para mantener las proporciones de la imagen */
+}
+
+header h1 {
+  flex-grow: 1; /* Permite que el h1 ocupe el espacio disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 0; /* Elimina el margen predeterminado */
+  font-size: 24px; /* Ajusta el tamaño de fuente si es necesario */
 }
 
 footer {
