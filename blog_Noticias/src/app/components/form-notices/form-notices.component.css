@@ -1,6 +1,9 @@
-.container{
+/* Contenedor general */
+.container {
   padding-left: 100px;
+  padding-right: 100px;
 }
+
 /* Contenedor del formulario */
 .form {
   max-width: 500px;
@@ -10,6 +13,8 @@
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+
+  margin-right: auto;
 }
 
 /* Estilos generales de los inputs y labels */
@@ -68,4 +73,70 @@
 
 .mb-3:hover {
   transform: translateY(-3px);
+}
+
+/* Media Queries para pantallas más pequeñas */
+
+/* Para pantallas de hasta 1200px */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .form {
+    max-width: 400px;
+  }
+}
+
+/* Para pantallas de hasta 992px */
+@media (max-width: 992px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .form {
+    max-width: 350px;
+  }
+}
+
+/* Para pantallas de hasta 768px */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .form {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form input[type="text"],
+  .form input[type="img"],
+  .btn {
+    padding: 12px;
+  }
+}
+
+/* Para pantallas de hasta 480px */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .form {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .form input[type="text"],
+  .form input[type="img"],
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
 }

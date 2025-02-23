@@ -1,6 +1,11 @@
 <header>
   <h1>Actualizado en: {{fechaMasReciente}}</h1>
   <img src="https://s3.abcstatics.com/media/tecnologia/2018/09/19/falso-kroH--1248x698@abc.jpg">
+  <ul class="listado">
+    <li><a href="#">Empleo</a></li>
+    <li><a href="#">Información</a></li>
+    <li><a href="#">Acerca de Nosotros</a></li>
+  </ul>
 </header>
 <hr>
 <app-blog [listaNotices]="arrayNotices"  (fechaMasReciente)="manejarFechaMasReciente($event)"></app-blog>

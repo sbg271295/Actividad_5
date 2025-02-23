@@ -1,10 +1,10 @@
+/* Estilos generales para el contenedor */
 .container {
   display: flex;
   flex-direction: row;
   gap: 30px;
   max-width: 100%;
   padding-top: 12px;
-
 }
 
 .column-form {
@@ -18,3 +18,53 @@
   padding-right: 200px;
 }
 
+/* Medias Queries para dispositivos móviles y tablets */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column-form,
+  .column-list {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column-form {
+    max-width: 100%;
+  }
+
+  .column-list {
+    max-width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+/* Pantallas grandes (escritorios y más grandes) */
+@media (min-width: 1025px) {
+  .container {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .column-form {
+    max-width: 30%;
+  }
+
+  .column-list {
+    max-width: 70%;
+    padding-right: 200px;
+  }
+}

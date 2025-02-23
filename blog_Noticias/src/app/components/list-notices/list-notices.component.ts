@@ -15,8 +15,6 @@ export class ListNoticesComponent implements OnInit {
   noticias:INotice[]=[];
 
   ngOnInit():void{
-    console.log(this.listaNotices)
     this.noticias=this.listaNotices
-    console.log(this.noticias)
   }
 }
